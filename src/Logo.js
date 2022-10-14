@@ -13,4 +13,12 @@ const Logo = () => {
   );
 };
 
+function ClickLogger() {
+  function LogWhenClicked() {
+    console.log("Button was clicked!");
+  }
+
+  return <img onClick={LogWhenCLicked}></img>;
+}
+
 export default Logo;
