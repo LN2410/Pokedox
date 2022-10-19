@@ -1,7 +1,6 @@
 import React from "react";
 
-const BestPokemon = () => {
-  const abilities = ["Anticipation", "Adaptability", "Run-Away"];
+const BestPokemon = (props) => {
   //   for (let i = 0; i < abilities.length; i++) {
   //     abilities[i];
   //   }
@@ -9,7 +8,7 @@ const BestPokemon = () => {
     <div>
       <p>My favorite Pokemon is Squirtle</p>
       <ul>
-        {abilities.map((name, index) => (
+        {props.abilities.map((name, index) => (
           <li key={index}>{name}</li>
         ))}
       </ul>
