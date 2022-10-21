@@ -7,8 +7,15 @@ const CaughtPokemon = (props) => {
     setCaught(caught + 1);
   }
 
+  const [pokemonNameInput, setPokemonNameInput] = useState("");
+
+  function handleInputChange(event) {
+    setPokemonNameInput(event.target.value);
+  }
+
   return (
     <div>
+      <input value={pokemonNameInput} onChange={handleInputChange}></input>
       <button onClick={catchPokemon}>Catch Pokemon</button>
       <p>
         Caught {caught} Pokemon on {props.date}
